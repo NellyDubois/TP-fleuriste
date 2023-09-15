@@ -1,9 +1,9 @@
-/* body{
+ body{
     background-color: white;
     font-family:'Raleway',sans-serif;
-} */
+} 
 
-
+/* HEADER */
 h1 {
         background-color: #c80000;
         color: white;
@@ -28,20 +28,23 @@ h3 {
 
 em{
     font-style: italic;
+    font-size:1.5em;
 }
 
 span{
     font-size:0.4em;
 }
 
-
+/* MAIN */
 div.Carroussel {
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-top:1rem;
     gap:15px;
 }
 
@@ -65,8 +68,8 @@ img{
     color: #ccc;
     font-size: 0.8rem;
     text-transform: uppercase;
-    border-bottom: 1px solid #ccc;
     padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
 }
 
 .AjoutPanier{
@@ -92,6 +95,9 @@ img{
     text-decoration:line-through;
     order:2;}
 
+
+
+ /*FOOTER */
 footer p {
     background-color: #666;
     padding: 0.5rem;
