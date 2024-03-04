@@ -151,11 +151,6 @@
   /** 768px --> 1023px  ====>  format tablette */
   /** 1024px --> infinie  ====>  format pc */
   
-  /*
-    Bonne pratique : mobile first --> écrire d'abord le CSS pour mobile,
-    puis écrire le CSS pour le fromat tablette grâce à un media query
-    Et finalement le CSS pour PC
-  */
   
   /* On crée une media query pour les devices de type screen */
   /* On met en place une condition à respecter pour que la MQ s'applique. Largeur d'écran inférieur à 768px ==> format mobile */
@@ -204,9 +199,6 @@
       width: 100%; /* Les boutons prennent toute la largeur disponible */
       margin: 10px auto; /* Ajoute un espace au-dessus et en dessous des boutons */
       text-align: center;
-    }
-    .fixed-sales {
-      display: none;
     }
   }
   
