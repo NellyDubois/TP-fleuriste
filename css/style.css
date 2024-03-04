@@ -21,7 +21,7 @@
     align-items: baseline;
     gap: 0.8rem;
     padding: 1rem;
-    background-color: #1a5099 ;
+    background-color: #87CEEB; /* Bleu ciel */
   }
   .header__title {
     font-size: 3rem;
@@ -34,7 +34,7 @@
   }
   .header__theme-container {
     padding: 0.5rem;
-    background-color: gray;
+    background-color: #9ACD32; /* Vert pastel */
     text-align: center;
   }
   .header__theme-title {
@@ -49,7 +49,7 @@
     top: 0; /* Au moment où on touche son top 0px, il devient fixed */
     z-index: 10; /* On fait en sorte qu'il soit au-dessus des autres éléments (sur l'axe z) */
     padding: 0.5rem;
-    background-color: lightgray;
+    background-color: #E6E6FA; /* Violet lavande */
     color: #1a5099 ;
     text-align: center;
   }
@@ -67,8 +67,8 @@
 /**     MAIN        *
 /********************/
  .product-list {
-    display: flex; /* Block flexible ! */
-    flex-direction: row; /* Les items en ligne */
+    display: flex; /* Block flexible */
+    flex-direction: row; /* Met les items en ligne */
     flex-wrap: wrap; /* Passe automatiquement à la ligne */
     justify-content: space-evenly; /* Distribuer le même espace antre les items */
     row-gap: 1rem; /* Espacement entre les lignes */
@@ -79,6 +79,9 @@
     width: 30%;
     border: 2px solid lightgray;
     padding: 0.5rem;
+    display: flex; /* pour que les boutons soient alignés y compris en version tablette*/
+    flex-direction: column; 
+    justify-content: space-between; 
   }
   
   /* POSITION ABSOLUTE : pastille de promo */
@@ -102,8 +105,11 @@
   
   .product-list__item-img {
     width: 100%;
+    height: 60vh; /* vh pour une hauteur responsive */
+    object-fit: cover; /* Assure que l'image couvre toute la zone sans déformation */
   }
-  .product-list__item-saga {
+
+  .product-list__item-collection {
     color: lightgray;
     font-weight: 800;
     font-size: 0.8rem;
@@ -118,7 +124,7 @@
     margin-bottom: 1rem;
   }
   .product-list__item-button {
-    background-color: #1a5099 ;
+    background-color: #87CEEB; /* Bleu ciel */
     display: flex;
     margin-top: 1.5rem;
     padding: 1rem;
@@ -156,7 +162,7 @@
 /**     FOOTER      *
 /********************/
 footer {
-    background-color: #666;
+    background-color: #E6E6FA;
     padding: 1.5rem 0;
     text-align: center;
     color: white;
@@ -172,7 +178,7 @@ footer {
     top: 50%; /* A 50% du top (donc au milieu sur l'axe vertical) */
     padding: 0.45rem;
     border-radius: 0 8px 8px 0;
-    background-color: #1a5099 ;
+    background-color: #9ACD32;;
     color: white;
     text-transform: uppercase;
     font-weight: 800;
