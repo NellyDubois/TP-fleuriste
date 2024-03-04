@@ -4,70 +4,123 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boutique oFig</title>
+    <!-- Ajout de la balise meta pour le référencement -->
+    <meta name="description" content="Boutique oFig - Vente de figurines et statuettes de Final Fantasy.">
 
     <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../css/style.css">
-    
+    <title>Boutique oFig</title>
 </head>
-
 <body>
+    <!-- BEM : Ici on a un bloc, on lui donne le nom 'header' -->
+    <header class="header">
+        <!-- BEM : Ici on a un element d'un bloc. On lui donne le nom block__element ===> header__title-container -->
+        <div class="header__title-container">
+            <h1 class="header__title">Ofig</h1>
+            <h2 class="header__subtitle">Figurines et statuettes</h2>
+        </div>
+        <div class="header__theme-container">
+            <h2 class="header__theme-title">Figurines sur le thème <span class="header__theme-title-franchise">Final Fantasy</span></h2>
+        </div>
+    </header>
 
-<header>
-    <h1>oFig <span>Figurines et statuettes</span></h1>
-    <h2>Figurines sur le thème <em>Final Fantasy</em></h2>
-</header>
-
-<main>
-    <div class="Carroussel">
-       
-        <article>
-            <img src="../images/cloud.png" alt="Personnage cloud">
-            <p class="TypePersonnage"> Final Fantasy VII</p>
-            <h3>Cloud Strife Remake</h3>
-            <p>Figurine de 8 pouces - livrée avec son packaging</p>
-            <section class="AjoutPanier">
-                <p class="bouton">Ajouter au panier</p>
-                <p class="prix"> 74,90 €</p>
-                <p class="prix-barre">  59 €</p>
-            </section>
-        </article>
-
-        <article>
-            <img src="../images/tifa.png" alt="Personnage Tifa">
-            <p class="TypePersonnage">Final Fantasy Advent Children</p>
-            <h3>Tifa Lockhart</h3>
-            <p>Figurine de 7 pouces - livrée avec son packaging</p>
-            <section class="AjoutPanier">
-                <p class="bouton">Ajouter au panier</p> 
-                <p class="prix"> 98,90 € </p>
-                <p class="prix-barre">69 €</p>
-            </section>
-        </article>
-
-        <article>    
-            <img src="../images/vincent.png" alt="Personnage Vincent">
-            <p class="TypePersonnage">Final Fantasy VII</p>
-            <h3>Vincent Valentine</h3>
-            <p>Figurine de 7 pouces - livrée avec son packaging</p>
-            <section class="AjoutPanier">
-                <p class="bouton">Ajouter au panier</p>
-                <p class="prix"> 74,90 €</p>
-            </section>
-            
-        </article>
+    <div class="sticky-ship">
+        <p class="sticky-ship__text">Livraison gratuite à partir de 20€ d'achat</p>
     </div>
-</main>
 
-<footer><p>oFig - toutes les images sont sous copyright SquareEnix</p></footer>
+    <main class="product-list">
+        <!-- Emmet : article.product-list__item>img.product-list__item-img+p.product-list__item-saga+h3.product-list__item-title+p.product-list__item-description+a.product-list__item-button>(span.product-list__item-button-label+span.product-list__item-button-price) -->
+        <article class="product-list__item">
+            <img src="../images/aerith.png" alt="Figurine d'Aerith" class="product-list__item-img">
+            <p class="product-list__item-saga">Final Fantasy Crisis Core</p>
+            <h3 class="product-list__item-title">Aerith Gainsborough</h3>
+            <p class="product-list__item-description">Figurine de 7 pouces - livrée avec son packaging</p>
+            <a href="" class="product-list__item-button">
+                <span class="product-list__item-button-label">Ajouter au panier</span>
+                <span class="product-list__item-button-price">74,90 €</span>
+            </a>
+        </article>
 
-    
+        <article class="product-list__item">
+            <!-- POSITIONNEMENT -->
+            <div class="product-list__item-promo">-30%</div>
+            
+            <img src="../images/cloud.png" alt="Figurine de Cloud Remake" class="product-list__item-img">
+            <p class="product-list__item-saga">Final Fantasy VII</p>
+            <h3 class="product-list__item-title">Cloud Strife Remake</h3>
+            <p class="product-list__item-description">Figurine de 8 pouces - livrée avec son packaging</p>
+            <a href="#" class="product-list__item-button">
+                <span class="product-list__item-button-label">Ajouter au panier</span>
+
+                <div class="product-list__item-button-prices">
+                    <span class="product-list__item-button-price product-list__item-button-price--strike">74,90 €</span>
+                    <span class="product-list__item-button-price">59 €</span>
+                </div>
+            </a>
+        </article>
+
+        <article class="product-list__item">
+            <img src="../images/cloud-ac.png" alt="Figurine de Cloud" class="product-list__item-img">
+            <p class="product-list__item-saga">Final Fantasy Advent Children</p>
+            <h3 class="product-list__item-title">Cloud Strife</h3>
+            <p class="product-list__item-description">Figurine de 7 pouces - livrée avec son packaging</p>
+            <a href="" class="product-list__item-button">
+              <span class="product-list__item-button-label">Ajouter au panier</span>
+              <span class="product-list__item-button-price">98,90 €</span>
+            </a>
+          </article>
+      
+          <article class="product-list__item">
+            <img src="../images/aerith.png" alt="Figurine d'Aerith" class="product-list__item-img">
+            <p class="product-list__item-saga">Final Fantasy Crisis Core</p>
+            <h3 class="product-list__item-title">Aerith Gainsborough</h3>
+            <p class="product-list__item-description">Figurine de 7 pouces - livrée avec son packaging</p>
+            <a href="" class="product-list__item-button">
+              <span class="product-list__item-button-label">Ajouter au panier</span>
+              <span class="product-list__item-button-price">74,90 €</span>
+            </a>
+          </article>
+      
+          <article class="product-list__item">
+            <img src="../images/tifa.png" alt="Figurine de Cloud Remake" class="product-list__item-img">
+            <p class="product-list__item-saga">Final Fantasy Advent Children</p>
+            <h3 class="product-list__item-title">Tifa Lockhart</h3>
+            <p class="product-list__item-description">Figurine de 7 pouces - livrée avec son packaging</p>
+            <a href="#" class="product-list__item-button">
+              <span class="product-list__item-button-label">Ajouter au panier</span>
+              <div class="product-list__item-button-prices">
+                <span class="product-list__item-button-price product-list__item-button-price--strike">69 €</span>
+                <span class="product-list__item-button-price">98,9 €</span>
+              </div>
+            </a>
+          </article>
+      
+          <article class="product-list__item">
+            <img src="../images/vincent.png" alt="Figurine de Cloud" class="product-list__item-img">
+            <p class="product-list__item-saga">Final Fantasy VII</p>
+            <h3 class="product-list__item-title">Vincent Valentine</h3>
+            <p class="product-list__item-description">Figurine de 7 pouces - livrée avec son packaging</p>
+            <a href="" class="product-list__item-button">
+              <span class="product-list__item-button-label">Ajouter au panier</span>
+              <span class="product-list__item-button-price">74,90 €</span>
+            </a>
+          </article>
+
+    </main>
+
+    <footer class="footer">
+        <p class="footer__copyright">oFig - toutes les images sont sous copyright SquareEnix</p>
+    </footer>
+
+    <!-- POSITIONNEMENT fixed -->
+    <aside class="fixed-sales">
+        <p class="fixed-saled__text">soldes</p>
+    </aside>
 </body>
-
 </html>

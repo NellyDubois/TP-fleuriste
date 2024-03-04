@@ -1,0 +1,204 @@
+ /********************
+ /**     GLOBAL      *
+ /********************/
+.main {
+    width: 45%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+ /********************
+ /**     CART       **
+ /********************/
+  .cart {
+    padding: 1.5rem;
+    text-align: center;
+  }
+  table {
+    width: 100%;
+    box-shadow: 2px 2px 6px 0px lightgrey;
+  }
+  thead {
+    border-bottom: 1px solid lightgray;
+  }
+  /* On ne peut pas appliquer de padding sur les thead, tr, tbody et tfoot. Il sont en display: table-row, ce qui empêche l'utilisation de padding */
+  /* On applique donc ce padding sur les cellules*/
+  th, td {
+    padding: 0.7rem;
+  }
+  th {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  /* On peut sélectionner tous les enfants pairs/impairs au sein d'un parent odd : impair / even : pair */
+  /* Ici, on vient cibler toutes les lignes impaires contenues dans le tbody */
+  tbody tr:nth-child(odd) {
+    background-color: lightgray;
+  }
+  tbody input[type=number] {
+    width: 10%;
+    margin-right: 0.5rem;
+  }
+  tfoot {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  /* On sélectionne le dernier td enfant contenu le tfoot */
+  tfoot td:last-child {
+    color: #C80000;
+    font-size: 1.5rem;
+  }
+  
+  
+/********************
+/**     SHIPPING     *
+/********************/
+  .shipping__title, .cart__title {
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  .shipping__form {
+    padding: 2rem;
+  }
+  .shipping__section {
+    display: flex;
+  }
+  .shipping__section-cols {
+    width: 50%;
+    padding: 1.5rem;
+  }
+  .shipping__section-fieldset {
+    margin-bottom: 2rem;
+  }
+  .shipping__section-fieldset-legend {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: grey;
+  }
+  .shipping__form-row {
+    margin-bottom: 0.6rem;
+  }
+  .shipping__form-row-addr {
+    display: flex;
+    flex-direction: column;
+  }
+  input[type=text], textarea {
+    width: 100%;
+    margin: 0.5rem 0;
+    height: 30px;
+    border: 0;
+    border-bottom: 1px solid lightgray;
+    background-color: #fcf9f9;
+  }
+  textarea {
+    height: 70px;
+  }
+  .shipping__price {
+    padding: 1.5rem;
+    border-top: 1px solid lightgray;
+  }
+  .shipping__price-container {
+    box-shadow: 2px 2px 6px 0px lightgrey;
+    border-radius: 4px;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  .shipping__price-container strong {
+    color: #C80000;
+    font-size: 1.2em;
+  }
+  .shipping__actions {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    padding: 1.5rem;
+  }
+  .shipping__actions-btn {
+    background-color: lightgray;
+    padding: 1.5rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+  .shipping__actions-btn--submit {
+    background-color: #C80000;
+    color: white;
+    border: none;
+  }
+  
+  
+  
+ /**********************************
+ /**     Responsive Web Design     *
+ /**********************************/
+  /** 0px --> 767px  ====>  format mobile */
+  /** 768px --> 1023px  ====>  format tablette */
+  /** 1024px --> infinie  ====>  format pc */
+  
+  /*
+    Bonne pratique : mobile first --> écrire d'abord le CSS pour mobile,
+    puis écrire le CSS pour le fromat tablette grâce à un media query
+    Et finalement le CSS pour PC
+  */
+  
+  /* On crée une media query pour les devices de type screen */
+  /* On met en place une condition à respecter pour que la MQ s'applique. Largeur d'écran inférieur à 768px ==> format mobile */
+  @media screen and (max-width: 767px) {
+  
+    /* Dans la MQ, on peut écrire de nouvelles règles CSS afin d'écraser/modifier les anciennes */
+    .main {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .cart {
+      padding: 0.5rem;
+    }
+    table {
+      font-size: 0.8rem;
+    }
+    .shipping__form {
+      padding: 0;
+    }
+    .shipping__section {
+      flex-direction: column;
+    }
+    .shipping__section-cols {
+      width: 100%;
+      padding: 0.5rem;
+    }
+    .shipping__price {
+      padding: 0.5rem;
+    }
+    .shipping__price-container {
+      padding: 1rem;
+      font-size: 1rem;
+      flex-direction: column;
+      align-items: center;
+    }
+    .shipping__actions {
+      flex-direction: column;
+      padding: 0.5rem;
+    }
+    .shipping__actions-btn {
+      padding: 1rem;
+      font-size: 1rem;
+      letter-spacing: 0;
+    }
+    .fixed-sales {
+      display: none;
+    }
+  }
+  
+  /* MQ pour format tablette */
+  @media screen and (max-width: 1023px) {
+    .main {
+      width: 100%;
+    }
+  }

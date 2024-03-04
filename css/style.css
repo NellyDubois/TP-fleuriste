@@ -1,106 +1,190 @@
+/********************
+/**     GLOBAL      *
+/********************/
  body{
     background-color: white;
     font-family:'Raleway',sans-serif;
 } 
 
-/* HEADER */
-h1 {
-        background-color: #c80000;
-        color: white;
-        padding: 2rem;
-        font-size: 2rem;
-        font-weight: 800;
+/* pour les écrans de moins de 767px */
+  @media screen and (max-width: 767px) {
+    body {
+      font-size: 0.8em;
     }
+  }
 
-
-h2 {
-    background-color: #666;
-    text-align: center;
-    padding: 0.5rem;
+/********************
+/**     HEADER      *
+/********************/
+.header__title-container {
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+    padding: 1rem;
+    background-color: #1a5099 ;
+  }
+  .header__title {
+    font-size: 3rem;
+    font-weight: 800;
     color: white;
-}
-
-h3 {
-    font-size: 1.2em;
-    font-weight: 700;
-    padding: 0.5em;
-}
-
-em{
+  }
+  .header__subtitle {
+    font-weight: 800;
+    color: white;
+  }
+  .header__theme-container {
+    padding: 0.5rem;
+    background-color: gray;
+    text-align: center;
+  }
+  .header__theme-title {
+    color: white;
+  }
+  .header__theme-title-franchise {
+    font-size: 1.5em;
     font-style: italic;
-    font-size:1.5em;
-}
+  }
+  .sticky-ship {
+    position: sticky; /* L'élément va se mettre en fixed au moment où on on va l'atteindre */
+    top: 0; /* Au moment où on touche son top 0px, il devient fixed */
+    z-index: 10; /* On fait en sorte qu'il soit au-dessus des autres éléments (sur l'axe z) */
+    padding: 0.5rem;
+    background-color: lightgray;
+    color: #1a5099 ;
+    text-align: center;
+  }
 
-span{
-    font-size:0.4em;
-}
+  @media screen and (max-width: 767px) {
+    .header__title {
+      font-size: 2rem;
+    }
+    .header__subtitle {
+      font-size: 0.8rem;
+    }
+  }
 
-/* MAIN */
-div.Carroussel {
+/********************
+/**     MAIN        *
+/********************/
+ .product-list {
+    display: flex; /* Block flexible ! */
+    flex-direction: row; /* Les items en ligne */
+    flex-wrap: wrap; /* Passe automatiquement à la ligne */
+    justify-content: space-evenly; /* Distribuer le même espace antre les items */
+    row-gap: 1rem; /* Espacement entre les lignes */
+    padding: 1rem 1.5rem;
+  }
+  .product-list__item {
+    position: relative; /* Position relative pour pouvoir positionner un enfant en absolute */
+    width: 30%;
+    border: 2px solid lightgray;
+    padding: 0.5rem;
+  }
+  
+  /* POSITION ABSOLUTE : pastille de promo */
+  .product-list__item-promo {
+    position: absolute; /* On peut bouger cet élément n'importe où dans son parent (car il est lui même positionné) */
+    right: 10px; /* à 10px du bord droit */
+    top: 10px; /* à 10px du bord supérieur */
     display: flex;
     justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    margin-top:1rem;
-    gap:15px;
-}
-
-article{
-    border:1px solid #ccc;
-    width: 30%;
-}
-
-article>p{
-    padding-right: 0.7em;
-    padding-bottom: 0.7em;
-    padding-left: 0.7em
-
-}
-
-img{
-    width:100%;
-}
-
-.TypePersonnage {
-    color: #ccc;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background-color: gray;
+    border: 4px solid lightgray;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: white;
+    transform: rotate(25deg); /* Permet d'appliquer une transformation sur l'élément. Ici on vient tourner de 25 degrès */
+  }
+  
+  .product-list__item-img {
+    width: 100%;
+  }
+  .product-list__item-saga {
+    color: lightgray;
+    font-weight: 800;
     font-size: 0.8rem;
+    padding: 0.4rem 0.3rem;
+    border-bottom: 2px solid lightgray;
     text-transform: uppercase;
-    padding: 0.5rem;
-    border-bottom: 1px solid #ccc;
-}
+    margin-bottom: 1rem;
+  }
+  .product-list__item-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+  .product-list__item-button {
+    background-color: #1a5099 ;
+    display: flex;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    color: white;
+    justify-content: space-between;
+    position: relative; /* Pour bouger l'élément en partant de sa position initiale */
+    transition: background-color 2s; /* Transition de 2s sur le changement de background-color (changement qui arrive lors du survol => :hover, définit juste en-dessous) */
+  }
+  .product-list__item-button:hover { /* Changement de style lors du survol sur cet élément */
+    background-color: #F0F; /* Le changement de couleur aura une transition de 2s (voir plus haut) */
+  }
+  .product-list__item-button-price {
+    font-weight: 800;
+    white-space: nowrap;
+  }
+  .product-list__item-button-price--strike {
+    font-weight: 400;
+    text-decoration: line-through;
+    white-space: nowrap;
+  }
 
-.AjoutPanier{
-    background-color:#c80000;
-    color:white;
-    padding:1em;
-    display:flex;
-    justify-content: space-around;
-}
-
-.bouton{    
-    order:1;
-}
-
-.prix{
-    order:3;
-    font-size:1.2em;
-    align-self:flex-end;
-}
-
-.prix-barre{
-    
-    text-decoration:line-through;
-    order:2;}
+  @media screen and (max-width: 767px) {
+    .product-list {
+      flex-direction: column;
+      align-items: center;
+    }
+    .product-list__item {
+      width: 90%;
+    }
+  }
+  
 
 
-
- /*FOOTER */
-footer p {
+/********************
+/**     FOOTER      *
+/********************/
+footer {
     background-color: #666;
-    padding: 0.5rem;
+    padding: 1.5rem 0;
     text-align: center;
     color: white;
 }
+
+
+/********************
+/**     FIXED       *
+/********************/
+ .fixed-sales {
+    position: fixed; /* on fixe l'élément sur la fenêtre du navigateur. La place qu'occupait cet élément est maintenant retirée de la page */
+    left: 0; /* Collé a gauche */
+    top: 50%; /* A 50% du top (donc au milieu sur l'axe vertical) */
+    padding: 0.45rem;
+    border-radius: 0 8px 8px 0;
+    background-color: #1a5099 ;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 0.8rem;
+    writing-mode: vertical-lr; /* Passe le texte en vertical */
+    text-orientation: upright; /* Passe les lettres vers le haut */
+    letter-spacing: -3px; /* Espacement entre les lettres */
+  }
+
+/*On n'affiche pas le badge soldes en version mobile*/
+@media screen and (max-width: 767px) {
+    .fixed-sales {
+      display: none;
+    }
+  }
