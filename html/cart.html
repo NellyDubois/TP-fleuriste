@@ -61,17 +61,26 @@
                         <!-- Pour créer une cellule dans une ligne : <td> => table data -->
                         <td>Bouquet flamboyant</td>
                         <td>45,9 €</td>
-                        <td><input type="number" name="qty"><a href="#">supprimer</a></td>
+                        <td>
+                            <input type="number" name="qty" min="1" value="1">
+                            <a href="#">supprimer</a>
+                        </td>    
                     </tr>
                     <tr>
                         <td>Bouquet éclat printanier</td>
                         <td>65,9 €</td>
-                        <td><input type="number" name="qty"><a href="#">supprimer</a></td>
+                        <td>
+                            <input type="number" name="qty" min="1" value="1">
+                            <a href="#">supprimer</a>
+                        </td> 
                     </tr>
                     <tr>
                         <td>Bouquet orchidées douceur</td>
                         <td>59,9 €</td>
-                        <td><input type="number" name="qty"><a href="#">supprimer</a></td>
+                        <td>
+                            <input type="number" name="qty" min="1" value="1">
+                            <a href="#">supprimer</a>
+                        </td> 
                     </tr>
                 </tbody>
 
@@ -96,7 +105,7 @@
                         <fieldset class="shipping__section-fieldset">
                             <legend class="shipping__section-fieldset-legend">Où souhaitez-vous être livré ?</legend>
                             <div class="shipping__form-row">
-                                <input type="radio" name="addr" id="addr"> <label for="addr">Mon adresse courante</label>
+                                <input type="radio" name="addr" id="addr" checked> <label for="addr">Mon adresse courante</label>
                             </div>
                             <div class="shipping__form-row">
                                 <input type="radio" name="addr" id="other-addr"> <label for="other-addr">Autre adresse</label>

@@ -36,7 +36,7 @@
     background-color: #E6E6FA;
   }
   tbody input[type=number] {
-    width: 10%;
+    width: 17%; /*pour voir le chiffre mlgré les flèches pour augmenter et diminuer*/
     margin-right: 0.5rem;
   }
   tfoot {
@@ -142,6 +142,7 @@
     margin: 10px 0;
     text-align: left;
 }
+
   
  /**********************************
  /**     Responsive Web Design     *
