@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <!-- Ajout de la balise meta pour le référencement -->
+    <meta name="description" content="Panier - Boutique Rêves de fleurs">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cart.css">
+
+    <title>Panier - Boutique Rêves de fleurs</title>
+</head>
+
+<body>
+    <!-- BEM : Ici on a un bloc, on lui donne le nom 'header' -->
+    <header class="header">
+        <!-- BEM : Ici on a un élément d'un bloc. On lui donne le nom block__element ===> header__title-container -->
+        <div class="header__title-container">
+            <h1 class="header__title">Rêves de fleurs</h1>
+            <p class="header__subtitle">Des bouquets éphémères, des sourires durables</p>
+        </div>
+        <div class="header__theme-container">
+            <h2 class="header__theme-title">Votre panier <span class="header__theme-title-franchise">3 produits</span></h2>
+        </div>
+        <div class="header__back-button">
+            <a href="index.html">Retour à la page d'accueil</a> 
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Section récapitulatif panier -->
+        <section class="cart">
+            <h2 class="cart__title">Votre panier</h2>
+
+            <!-- Pour créer un tableau : <table> -->
+            <table>
+                <!-- Sémantique de tableau : thead pour l'entete d'un tableau -->
+                <thead>
+                    <!-- Pour créer une ligne dans ce tableau : <tr> => table row -->
+                    <tr>
+                        <!-- Pour créer un en-tête : <th> => table heading -->
+                        <!-- On ajoute l'attribut scope pour une meilleure accessibilité.Indique que l'entête concerne une colonne -->
+                        <th scope="col">Bouquet</th> 
+                        <th scope="col">Prix unitaire</th>
+                        <th scope="col">Quantité</th>
+                    </tr>
+                </thead>
+
+                <!-- Sémantique de tableau : tbody pour le corps du tableau -->
+                <tbody>
+                    <tr>
+                        <!-- Pour créer une cellule dans une ligne : <td> => table data -->
+                        <td>Bouquet flamboyant</td>
+                        <td>45,9 €</td>
+                        <td><input type="number" name="qty"><a href="#">supprimer</a></td>
+                    </tr>
+                    <tr>
+                        <td>Bouquet éclat printanier</td>
+                        <td>65,9 €</td>
+                        <td><input type="number" name="qty"><a href="#">supprimer</a></td>
+                    </tr>
+                    <tr>
+                        <td>Bouquet orchidées douceur</td>
+                        <td>59,9 €</td>
+                        <td><input type="number" name="qty"><a href="#">supprimer</a></td>
+                    </tr>
+                </tbody>
+
+                <!-- Sémantique de tableau : tfoot pour le pied du tableau -->
+                <tfoot>
+                    <tr>
+                        <!-- L'attribut colspan permet de fusionner plusierus cellules (ici 2) -->
+                        <td colspan="2">Total de la commande :</td>
+                        <td>171,7 €</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <!-- Section préférences de livraison -->
+        <section class="shipping">
+            <h2 class="shipping__title">Préférences de livraison</h2>
+            <form action="" class="shipping__form">
+                <section class="shipping__section">
+                    <!-- Première colonne gauche -->
+                    <div class="shipping__section-cols">
+                        <fieldset class="shipping__section-fieldset">
+                            <legend class="shipping__section-fieldset-legend">Où souhaitez-vous être livré ?</legend>
+                            <div class="shipping__form-row">
+                                <input type="radio" name="addr" id="addr"> <label for="addr">Mon adresse courante</label>
+                            </div>
+                            <div class="shipping__form-row">
+                                <input type="radio" name="addr" id="other-addr"> <label for="other-addr">Autre adresse</label>
+                            </div>
+                        </fieldset>
+                        <fieldset class="shipping__section-fieldset">
+                            <legend class="shipping__section-fieldset-legend">Options</legend>
+                            <div class="shipping__form-row">
+                                <input type="checkbox" name="sms" id="sms"> <label for="sms">Suivi de livraison par sms (inclus)</label>
+                            </div>
+                            <div class="shipping__form-row">
+                                <input type="checkbox" name="refund" id="refund"> <label for="refund">Satisfait ou remboursé
+                                    (+2€)</label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <!-- Seconde colonne gauche -->
+                    <div class="shipping__section-cols">
+                        <fieldset class="shipping__section-fieldset">
+                            <legend class="shipping__section-fieldset-legend">Adresse</legend>
+                            <div class="shipping__form-row-addr">
+                                <label for="street">Rue</label>
+                                <input type="text" name="street" id="street" required>
+                            </div>
+                            <div class="shipping__form-row-addr">
+                                <label for="zip">Code postal</label>
+                                <input type="text" name="zip" id="zip" required>
+                            </div>
+                            <div class="shipping__form-row-addr">
+                                <label for="city">Ville</label>
+                                <input type="text" name="city" id="city" required>
+                            </div>
+                        </fieldset>
+                        <fieldset class="shipping__section-fieldset">
+                            <legend class="shipping__section-fieldset-legend">Informations complémentaires</legend>
+                            <div class="shipping__form-row-infos">
+                                <label for="infos">Interphone, bâtiment, etc.</label>
+                                <textarea name="infos" id="infos"></textarea>
+                            </div>
+                        </fieldset>
+                    </div>
+                </section>
+                <div class="shipping__price">
+                    <div class="shipping__price-container">
+                        <p class="shipping__price-container-text">Montant total à régler :</p>
+                        <p class="shipping__price-container-text"><strong>171,7 €</strong></p>
+                    </div>
+                </div>
+                <div class="shipping__actions">
+                    <a class="shipping__actions-btn" href="index.html">Continuer vos achats</a>
+                    <button class="shipping__actions-btn shipping__actions-btn--submit" type="submit">Valider et payer</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__copyright">Images provenant de pexels.com</p>
+    </footer>
+
+    <!-- POSITIONNEMENT fixed -->
+    <aside class="fixed-sales">
+        <p class="fixed-saled__text">soldes</p>
+    </aside>
+
+</body>
+
+</html>

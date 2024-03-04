@@ -33,7 +33,7 @@
   /* On peut sélectionner tous les enfants pairs/impairs au sein d'un parent odd : impair / even : pair */
   /* Ici, on vient cibler toutes les lignes impaires contenues dans le tbody */
   tbody tr:nth-child(odd) {
-    background-color: lightgray;
+    background-color: #E6E6FA;
   }
   tbody input[type=number] {
     width: 10%;
@@ -45,7 +45,7 @@
   }
   /* On sélectionne le dernier td enfant contenu le tfoot */
   tfoot td:last-child {
-    color: #C80000;
+    color: #9ACD32;
     font-size: 1.5rem;
   }
   
@@ -109,7 +109,7 @@
     font-weight: 700;
   }
   .shipping__price-container strong {
-    color: #C80000;
+    color: #9ACD32;
     font-size: 1.2em;
   }
   .shipping__actions {
@@ -120,19 +120,28 @@
     padding: 1.5rem;
   }
   .shipping__actions-btn {
-    background-color: lightgray;
+    background-color: #E6E6FA;
     padding: 1.5rem;
     font-weight: 700;
     font-size: 1.1rem;
     letter-spacing: 1px;
   }
   .shipping__actions-btn--submit {
-    background-color: #C80000;
+    background-color: #9ACD32;
     color: white;
     border: none;
   }
   
-  
+  .header__back-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #E6E6FA;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    text-align: left;
+}
   
  /**********************************
  /**     Responsive Web Design     *
@@ -190,6 +199,10 @@
       padding: 1rem;
       font-size: 1rem;
       letter-spacing: 0;
+      display: block;
+      width: 100%; /* Les boutons prennent toute la largeur disponible */
+      margin: 10px auto; /* Ajoute un espace au-dessus et en dessous des boutons */
+      text-align: center;
     }
     .fixed-sales {
       display: none;

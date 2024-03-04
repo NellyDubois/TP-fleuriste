@@ -40,7 +40,7 @@
   .header__theme-title {
     color: white;
   }
-  .header__theme-title-franchise {
+  .header__theme-title-name {
     font-size: 1.5em;
     font-style: italic;
   }
@@ -178,7 +178,7 @@ footer {
     top: 50%; /* A 50% du top (donc au milieu sur l'axe vertical) */
     padding: 0.45rem;
     border-radius: 0 8px 8px 0;
-    background-color: #9ACD32;;
+    background-color: #9ACD32;
     color: white;
     text-transform: uppercase;
     font-weight: 800;
