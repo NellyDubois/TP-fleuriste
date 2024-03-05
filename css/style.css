@@ -1,49 +1,175 @@
 /********************
 /**     GLOBAL      *
 /********************/
- body{
-    background-color: white;
-    font-family:'Raleway',sans-serif;
-} 
+body {
+  background-color: white;
+  font-family: 'Raleway', sans-serif;
+}
 
 /* pour les écrans de moins de 767px */
-  @media screen and (max-width: 767px) {
-    body {
+@media screen and (max-width: 767px) {
+  body {
       font-size: 0.8em;
-    }
   }
+}
 
 /********************
 /**     HEADER      *
 /********************/
+.header {
+  position: relative;
+}
+
 .header__title-container {
-    display: flex;
-    align-items: baseline;
-    gap: 0.8rem;
-    padding: 1rem;
-    background-color: #87CEEB; /* Bleu ciel */
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  padding: 1rem;
+  background-color: #87CEEB; /* Bleu ciel */
+}
+
+.header__title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: white;
+}
+
+.header__subtitle {
+  font-weight: 800;
+  color: white;
+}
+
+.header__theme-container {
+  padding: 0.5rem;
+  background-color: #9ACD32; /* Vert pastel */
+  text-align: center;
+}
+
+.header__theme-title {
+  color: white;
+}
+
+.header__theme-title-name {
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: space-between; /* Sépare les éléments à gauche et à droite */
+  align-items: center; /*centre verticalement les éléments*/
+  padding: 0.5rem;
+  background-color: #E6E6FA;
+  color: #1a5099;
+  text-align: center;
+}
+
+.header__nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+#retour-accueil {
+  display: inline-block;
+  padding: 10px 20px;  
+  margin-right: auto; /*Pour que le bouton soit à gauche */
+}
+
+.header__button{
+  text-decoration: none; /* Supprime le soulignement du lien */
+  border-radius: 5px; /* Bords arrondis du bouton */
+  transition: background-color 0.3s; /* Transition douce lors du survol du bouton */
+  background-color: #87CEEB; /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte du bouton */
+  border:none;
+  padding: 5px 5px;
+  
+}
+
+#retour-accueil:hover {
+  background-color: #1a5099; /* Couleur de fond du bouton lors du survol */
+}
+
+.header__nav-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem; /* Ajoute un espace entre les éléments */
+}
+
+.header__nav-link {
+  text-decoration: none;
+  color: #1a5099;
+}
+
+.header__nav-item {
+  display: inline-block;
+}
+
+.header__nav-link:hover {
+  color: #0d335d;
+}
+
+.header__nav-search-form {
+  margin-right: 1rem; /* Ajoute un espace à droite de la barre de recherche */
+}
+
+.header__nav-search-form input[type="search"] {
+  /* margin-right: 1rem; */
+  box-sizing: border-box;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  border-radius: 0.5rem;
+  border-width: 0.1rem;
+}
+
+/* Media query pour les appareils mobiles */
+@media (max-width: 767px) {
+  .header__nav {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
   }
-  .header__title {
-    font-size: 3rem;
-    font-weight: 800;
-    color: white;
+
+
+   .header__nav-right {
+    flex-direction: column; 
+    align-items: center;
+}
+
+  .header__nav-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
   }
-  .header__subtitle {
-    font-weight: 800;
-    color: white;
+
+  .header__nav-search-form {
+      width: 100%;
+      margin-right: 0;
   }
-  .header__theme-container {
-    padding: 0.5rem;
-    background-color: #9ACD32; /* Vert pastel */
-    text-align: center;
+
+  .header__nav-search-form input[type="search"] {
+      width: 100%;
+      font-size: 0.8em; 
   }
-  .header__theme-title {
-    color: white;
+
+  .header__nav-link {
+    font-size: 0.8em; /* Réduit la taille de la police des liens de navigation */
+}
+
+  #retour-accueil {
+    margin-bottom: 0.5rem; /* Ajoute un espace en dessous du bouton "Retour à la page d'accueil" */
+    margin-right: 0; 
   }
-  .header__theme-title-name {
-    font-size: 1.5em;
-    font-style: italic;
-  }
+
+  .header__button {
+    margin-top: 0.2rem;
+} 
+}
+/********************
+/**     STICKY      *
+/********************/
   .sticky-ship {
     position: sticky; /* L'élément va se mettre en fixed au moment où on on va l'atteindre */
     top: 0; /* Au moment où on touche son top 0px, il devient fixed */
@@ -55,6 +181,9 @@
   }
 
   @media screen and (max-width: 767px) {
+    .sticky-ship {
+      position: static; /* L'élément n'est plus fixe en version mobile */
+    }
     .header__title {
       font-size: 2rem;
     }
@@ -104,7 +233,7 @@
   }
   
   .product-list__item-img {
-    width: 100%;
+    max-width: 100%; /*pour éviter que les images dépassent de leur conteneur si elles sont trop grandes*/
     height: 60vh; /* vh pour une hauteur responsive */
     object-fit: cover; /* Assure que l'image couvre toute la zone sans déformation */
   }
@@ -169,6 +298,32 @@ footer {
 }
 
 
+.footer__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer__list-item {
+  display: inline;
+  margin-right: 10px;
+}
+
+.footer__link {
+  color: #1a5099;
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+.footer__link:hover {
+  color: #0d335d;
+}
+
+@media screen and (max-width: 767px) {
+  .footer__list-item {
+      display: block; /* Chaque élémént du footer est affiché sur sa propre ligne */
+      margin: 10px 0; /* Marge en haut et en bas pour espacer les éléments */
+  }
+}
 /********************
 /**     FIXED       *
 /********************/
