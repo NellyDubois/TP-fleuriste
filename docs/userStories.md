@@ -1,7 +1,7 @@
 # User stories de l'application web Rêves de fleurs
 
 | En tant que | Je veux | Afin de                                        |
-|:-----------:|:-----------------------------:|:----------------------------------------------:|
+|:-----------:|:-------:|:----------------------------------------------:|
 | visiteur    | Je veux pouvoir visualiser tous les bouquets disponibles | Afin d’avoir une vue d’ensemble avant de choisir |
 | visiteur    | Je veux pouvoir effectuer une recherche de bouquet      | Pour trouver plus rapidement les fleurs que je souhaite |
 | visiteur    | Je veux voir le récapitulatif de tous les bouquets que j'ai ajoutés à mon panier avec le prix total | Afin de vérifier avant de payer |
