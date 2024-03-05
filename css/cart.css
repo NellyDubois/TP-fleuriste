@@ -16,10 +16,10 @@
   }
   table {
     width: 100%;
-    box-shadow: 2px 2px 6px 0px lightgrey;
+    box-shadow: 0.2em 0.2em 0.6em 0em lightgrey;
   }
   thead {
-    border-bottom: 1px solid lightgray;
+    border-bottom: 0.1em solid lightgray;
   }
   /* On ne peut pas appliquer de padding sur les thead, tr, tbody et tfoot. Il sont en display: table-row, ce qui empêche l'utilisation de padding */
   /* On applique donc ce padding sur les cellules*/
@@ -87,21 +87,21 @@
   input[type=text], textarea {
     width: 100%;
     margin: 0.5rem 0;
-    height: 30px;
+    height: 3rem;
     border: 0;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 0.1rem solid lightgray;
     background-color: #fcf9f9;
   }
   textarea {
-    height: 70px;
+    height: 7rem;
   }
   .shipping__price {
     padding: 1.5rem;
-    border-top: 1px solid lightgray;
+    border-top: 10.1rem solid lightgray;
   }
   .shipping__price-container {
-    box-shadow: 2px 2px 6px 0px lightgrey;
-    border-radius: 4px;
+    box-shadow: 0.2rem 0.2rem 0.6rem 0rem lightgrey;
+    border-radius: 0.4rem;
     padding: 2rem;
     display: flex;
     justify-content: space-between;
@@ -115,8 +115,8 @@
   .shipping__actions {
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
+    border-top: 0.1rem solid lightgray;
+    border-bottom: 0.1rem solid lightgray;
     padding: 1.5rem;
   }
   .shipping__actions-btn {
@@ -124,26 +124,13 @@
     padding: 1.5rem;
     font-weight: 700;
     font-size: 1.1rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.1rem;
   }
   .shipping__actions-btn--submit {
     background-color: #9ACD32;
     color: white;
     border: none;
   }
-  
-  .header__back-button a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #E6E6FA;
-    color: #333;
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 10px 0;
-    text-align: left;
-}
-
-  
  /**********************************
  /**     Responsive Web Design     *
  /**********************************/

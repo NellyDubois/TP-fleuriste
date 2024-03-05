@@ -4,6 +4,7 @@
 body {
   background-color: white;
   font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
 }
 
 /* pour les écrans de moins de 767px */
@@ -11,6 +12,16 @@ body {
   body {
       font-size: 0.8em;
   }
+}
+
+a {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: contain;
 }
 
 /********************
@@ -56,7 +67,7 @@ body {
 
 .header__nav {
   display: flex;
-  justify-content: space-between; /* Sépare les éléments à gauche et à droite */
+  justify-content: flex-end; /* Sépare les éléments à gauche et à droite */
   align-items: center; /*centre verticalement les éléments*/
   padding: 0.5rem;
   background-color: #E6E6FA;
@@ -70,7 +81,7 @@ body {
   gap: 1rem;
 }
 
-#retour-accueil {
+#header__button-back {
   display: inline-block;
   padding: 10px 20px;  
   margin-right: auto; /*Pour que le bouton soit à gauche */
@@ -87,7 +98,7 @@ body {
   
 }
 
-#retour-accueil:hover {
+#header__button-back:hover {
   background-color: #1a5099; /* Couleur de fond du bouton lors du survol */
 }
 
@@ -99,8 +110,7 @@ body {
 }
 
 .header__nav-link {
-  text-decoration: none;
-  color: #1a5099;
+   color: #1a5099;
 }
 
 .header__nav-item {
@@ -158,14 +168,25 @@ body {
     font-size: 0.8em; /* Réduit la taille de la police des liens de navigation */
 }
 
-  #retour-accueil {
-    margin-bottom: 0.5rem; /* Ajoute un espace en dessous du bouton "Retour à la page d'accueil" */
+  #header__button-back {
+    /* margin-bottom: 0.5rem; 
     margin-right: 0; 
+    margin-top:10px; */
+
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    margin-top: 0.8rem;
+    
   }
 
   .header__button {
-    margin-top: 0.2rem;
-} 
+    margin-top: 0.8rem;
+  } 
+
+.header__button:hover {
+  background-color: #1a5099;
+  transition: background-color 2s;
+  } 
 }
 /********************
 /**     STICKY      *
@@ -349,3 +370,13 @@ footer {
       display: none;
     }
   }
+
+  .product-list__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-list__item img {
+    align-self: flex-end;
+}
