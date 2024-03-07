@@ -254,6 +254,7 @@ img {
   }
   
   .product-list__item-img {
+    align-self: center; /* Pour centrer l'image */
     max-width: 100%; /*pour éviter que les images dépassent de leur conteneur si elles sont trop grandes*/
     height: 60vh; /* vh pour une hauteur responsive */
     object-fit: cover; /* Assure que l'image couvre toute la zone sans déformation */
@@ -377,6 +378,9 @@ footer {
     justify-content: space-between;
 }
 
-.product-list__item img {
-    align-self: flex-end;
+/* On crée une media query pour les devices de type tablette */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .product-list__item {
+      width: 45%;
+  }
 }

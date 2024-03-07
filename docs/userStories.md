@@ -8,6 +8,7 @@
 | visiteur    | Je veux pouvoir ajouter un bouquet à mon panier         | Pour l'acheter |
 | visiteur    | Je veux pouvoir modifier la quantité d'un bouquet ajouté à mon panier ou supprimer le bouquet de mon panier | Afin d'ajuster mes achats |
 | visiteur    | Je veux pouvoir payer mon panier                        | Afin de finaliser mon achat de bouquets |
+| visiteur    | Je veux pouvoir aller sur mon compte client                       | Afin de visualiser mes préférences de livraison et mes précédentes commandes |
 | visiteur    | Je veux pouvoir choisir où je souhaite être livré      | Afin de réceptionner ma commande |
 | fleuriste   | Je veux montrer que je propose des bouquets en solde sur la page d’accueil | Afin d’inciter les clients à acheter |
 | fleuriste   | Je veux pouvoir proposer des options telles que le suivi par SMS ou la garantie "satisfait ou remboursé" | Afin de personnaliser les commandes |
